@@ -12,6 +12,7 @@ import { FirebaseError } from "firebase/app";
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
+import GithubLogin from "../components/github-login";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -76,6 +77,7 @@ export default function Login() {
         Don't have an account?{" "}
         <Link to="/create-account">Create one &rarr;</Link>
       </Switcher>
+      <GithubLogin />
     </Wrapper>
   );
 }

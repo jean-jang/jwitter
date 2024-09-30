@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import { FirebaseError } from "firebase/app";
 import { Link } from "react-router-dom";
+import GithubLogin from "../components/github-login";
 
 export default function CreateAccount() {
   const navigate = useNavigate();
@@ -93,6 +94,7 @@ export default function CreateAccount() {
       <Switcher>
         Already have an account? <Link to="/login">Log in &rarr;</Link>
       </Switcher>
+      <GithubLogin />
     </Wrapper>
   );
 }
